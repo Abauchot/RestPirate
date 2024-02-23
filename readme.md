@@ -15,33 +15,32 @@ DOCUMENTATION :
     Classe Journal
 --------------
 
-    La classe Journal permet de gérer un journal d'entrées stockées dans un fichier JSON.
+La classe Journal permet de gérer un journal d'entrées stockées dans un fichier JSON.
 
-    Propriétés :
+Propriétés :
         - $filePath : Chemin vers le fichier JSON utilisé pour stocker les entrées du journal. Par défaut, il est défini sur 'journal_data.json'.
 
-    Méthodes :
+Méthodes :
         - getEntries() : Cette méthode permet de récupérer les entrées du journal. Si le fichier n'existe pas, elle retourne un tableau vide.
             Signature : getEntries() -> array
-
-    - addEntry($date, $title, $entry) : Cette méthode permet d'ajouter une nouvelle entrée au journal.
+        - addEntry($date, $title, $entry) : Cette méthode permet d'ajouter une nouvelle entrée au journal.
     Paramètres :
         - $date : La date de l'entrée.
         - $title : Le titre de l'entrée.
         - $entry : Le contenu de l'entrée.
         Signature : addEntry(string $date, string $title, string $entry) -> void
 
-    Utilisation :
+ Utilisation :
     -------------
     Voici comment utiliser la classe Journal :
 
-    1. Création d'une instance de la classe Journal :
+ 1. Création d'une instance de la classe Journal :
    $journal = new Journal();
 
-    2. Ajout d'une nouvelle entrée :
+ 2. Ajout d'une nouvelle entrée :
    $journal->addEntry('2024-02-23', 'Titre de l'entrée', 'Ceci est le contenu de l'entrée du journal.');
 
-    3. Récupération de toutes les entrées :
+ 3. Récupération de toutes les entrées :
    $entries = $journal->getEntries();
 
 - index.php 
